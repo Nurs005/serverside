@@ -14,27 +14,27 @@ class newClass {
     let collor = ''
     let degree = ''
     if (image == 'red' && degreeValue == 'bachelor') {
-      imageCID = 'QmPF6qkmyGbHC4Cp6oFhkEVG2GJJMoyD1cDG7Nf9EUq4nd'
+      imageCID = 'QmdsRS3BJeh1NgroQJkG4StD85cntWVfLReeBwg5dr3UQm'
       collor = 'Красный'
       degree = 'Бакалавр'
     } else if (image == 'blue' && degreeValue == 'bachelor') {
-      imageCID = 'QmZCyx6bB32kgpcWpanv64S432CoML2aSsvJ1mY2BMEdhy'
+      imageCID = 'QmdsRS3BJeh1NgroQJkG4StD85cntWVfLReeBwg5dr3UQm'
       collor = 'Синий'
       degree = 'Бакалавр'
     } else if (image == 'red' && degreeValue == 'master') {
-      imageCID = 'QmNUafUdpHXpK3NzDBjFKLyGHuWoczRbko5kt8Q7smDBVQ'
+      imageCID = 'QmdsRS3BJeh1NgroQJkG4StD85cntWVfLReeBwg5dr3UQm'
       collor = 'Красный'
       degree = 'Мастер'
     } else if (image == 'blue' && degreeValue == 'master') {
-      imageCID = 'QmXqY2NgYx8pcwoV6GSPeinVK1bi2YjKMvVcBGkixTW8Sz'
+      imageCID = 'QmdsRS3BJeh1NgroQJkG4StD85cntWVfLReeBwg5dr3UQm'
       collor = 'Синий'
       degree = 'Мастер'
     } else if (image == 'red' && degreeValue == 'doctor') {
-      imageCID = 'QmcLWgqqdqWvYVYj4RU6KWC5ij5YyhCBRHwYF3ajMcVmv4'
+      imageCID = 'QmdsRS3BJeh1NgroQJkG4StD85cntWVfLReeBwg5dr3UQm'
       collor = 'Красный'
       degree = 'Доктор'
     } else if (image == 'blue' && degreeValue == 'doctor') {
-      imageCID = 'QmNq4N143wycGUWUGnky6BCAqm5vbQEHoK91LbAthtv48P'
+      imageCID = 'QmdsRS3BJeh1NgroQJkG4StD85cntWVfLReeBwg5dr3UQm'
       collor = 'Синий'
       degree = 'Доктор'
     }
