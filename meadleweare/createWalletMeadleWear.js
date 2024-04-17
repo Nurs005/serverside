@@ -1,6 +1,6 @@
 const { Web3 } = require('web3');
 const { create } = require('../models/User');
-const endpont = 'https://eth-mainnet.g.alchemy.com/v2/nsy1wVdd1DkxbDrnnC26FfzKhWmI4Lhn'
+const endpont = 'https://eth-sepolia.g.alchemy.com/v2/AIepbTs1NizYh3mlVMsgVXVzIYPMmVPk'
 const web3 = new Web3(endpont)
 
 const createWallet = async (req, res, next) => {
