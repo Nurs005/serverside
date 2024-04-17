@@ -1,6 +1,6 @@
 const { Web3 } = require('web3');
 const { create } = require('../models/User');
-const endpont = 'https://sepolia.rpc.rivet.cloud/0b4acccaf0ce4abb85b7ca5c0fec61e1'
+const endpont = 'https://eth-sepolia.g.alchemy.com/v2/AIepbTs1NizYh3mlVMsgVXVzIYPMmVPk'
 const web3 = new Web3(endpont)
 
 const createWallet = async (req, res, next) => {
