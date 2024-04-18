@@ -16,14 +16,7 @@ const getDataFromMetadata = async (req, res) => {
         });
 
         const metadataResults = await Promise.all(metadataPromises);
-        const flattenedData = metadataResults.flatMap(({ attributes, ...rest }) => {
-            const restWithAttributes = [rest];
-            if (attributes) {
-                restWithAttributes.push(...attributes);
-            }
-            return restWithAttributes;
-        });
-        return res.json(flattenedData);
+        return res.json(metadataResults);
     } catch (error) {
         return res.status(400).json(error.message);
     }
