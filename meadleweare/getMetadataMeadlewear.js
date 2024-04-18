@@ -13,8 +13,15 @@ const getDataFromMetadata = async (req, res) => {
                 throw new Error(`Ошибка при запросе к ${metadataUrl}`);
             }
             const metadata = await response.json();
-            // Добавляем свойство "id" и обертываем в новый объект с ключом "metadata"
-            return { id: index + 1, metadata };
+
+            const newData = metadata.map((item, index) => {
+                const newItem = { ...item };
+                delete newItem.name;
+                return {
+                    id: index + 1,
+                    metadata: newItem
+                };
+            });
         });
 
         const metadataResults = await Promise.all(metadataPromises);

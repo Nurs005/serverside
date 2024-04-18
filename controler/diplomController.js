@@ -1,11 +1,13 @@
 const Diplom = require('../models/Diplom');
+const User = require('../models/User');
 const diplomsBascket = require('../models/diplomsBascket');
+const UserBasket = require('../models/userBasket')
 const DiplomsBasket = require('../models/diplomsBascket');
 
 class DiplomsController {
     async create(req, res) {
         try {
-            const metadata = req.metadata
+            const metadata = req.ipfsImage
             if (!metadata) {
                 return res.status(404).json({ message: 'metadata is required' })
             }
@@ -31,13 +33,17 @@ class DiplomsController {
                 const parsedDiploms = diplomsid.map(diplom => ({
                     diplomId: diplom.diplomid
                 }));
+                const userBasket = await UserBasket.findOne({ _id: req.user });
+                const userNameaccess = userBasket.userid
+                const user = await User.findOne({ _id: userNameaccess });
                 const diploms = await Diplom.find({
                     _id: { $in: parsedDiploms.map(diplom => diplom.diplomId) }
                 });
                 const parseMetadata = diploms.map(d => d.metadata);
-                req.metadata = parseMetadata
-                next()
-                return
+                parseMetadata.unshift({ name: `${user.userName}` });
+                // req.metadata = parseMetadata
+                // next()
+                return res.json(parseMetadata)
             }
             return res.status(404).json("Пользователя не существует.")
         } catch (e) {

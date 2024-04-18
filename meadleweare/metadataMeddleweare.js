@@ -65,7 +65,9 @@ class newClass {
         const data = await response.json();
         console.log('Metadata uploaded successfully. CID:', `https://ipfs.io/ipfs/${data.IpfsHash}`);
         const metaUri = `https://ipfs.io/ipfs/${data.IpfsHash}`;
+        const imageURR = `https://ipfs.io/ipfs/${imageCID}`;
         req.metadata = metaUri;
+        req.ipfsImage = imageURR;
         next()
         return
       }
