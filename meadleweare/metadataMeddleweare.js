@@ -1,7 +1,7 @@
 // const { json } = require("hardhat/internal/core/params/argumentTypes");
 
 // import axios from 'axios';
-const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJkNDA4ZjExNC05N2I5LTQ5MjgtOTQ0Yy0wMWFiMzJhZGRiNGMiLCJlbWFpbCI6InBhc3RhZm9ydEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJpZCI6IkZSQTEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX0seyJpZCI6Ik5ZQzEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiNjhkNjhiN2RjMjk4Nzg0ZjA0MzciLCJzY29wZWRLZXlTZWNyZXQiOiJjYmFhNDRmOTljZjI2MTUwYjlmMjYyMmU2MTEzMDc3NzQ2NTU1N2RmYzVjNjU2MGE1YTY4ZDViMTM4NWVkZGFhIiwiaWF0IjoxNzEwNDA0MjMyfQ.jT0kCIxKIaYwrt5Bb0WA2LDtNenFY01RhoUMkFw34PY"
+const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJkMmJmZGZmZS02Yzg0LTQwNzktYjRmMy00YTU5YWRjNjQ1NTgiLCJlbWFpbCI6ImlzbWFpbG92Lm5AZ2V4YWJ5dGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siaWQiOiJGUkExIiwiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjF9LHsiaWQiOiJOWUMxIiwiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjF9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZSwic3RhdHVzIjoiQUNUSVZFIn0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6ImMzZWI0Nzk2MDcxMzMwOTRiNGRkIiwic2NvcGVkS2V5U2VjcmV0IjoiZGQyMzU4OGRiOGYzNjg0ZTdiNjM0MjlhOTQ5M2YxMGMyMDgxNzY2MjVjOTgwZTk3ZWI1YWM1ZmNhNzRiODM1MiIsImlhdCI6MTcyMjU5Njg1M30.T6-kMfgVNdrXjRgTJUwUQZY5TQTQHXrQ1Qp_jA6Ijso"
 const apiSecret = "cbaa44f99cf26150b9f2622e61130777465557dfc5c6560a5a68d5b1385eddaa"
 
 class newClass {
@@ -48,7 +48,7 @@ class newClass {
     const metadata = JSON.stringify({
       name: name,
       description: description,
-      image: `https://ipfs.io/ipfs/${imageCID}`,
+      image: `https://coral-magic-mackerel-539.mypinata.cloud/ipfs/QmR4AzXbj7myPBCqZpdMnKVNS1esVqGH6GKKP8sdVkBEWL`,
       attributes: objj, // Атрибут должен идти в виде массива из обьектов [{}, {}] 
     });
     try {
@@ -65,7 +65,7 @@ class newClass {
         const data = await response.json();
         console.log('Metadata uploaded successfully. CID:', `https://ipfs.io/ipfs/${data.IpfsHash}`);
         const metaUri = `https://ipfs.io/ipfs/${data.IpfsHash}`;
-        const imageURR = `https://ipfs.io/ipfs/${imageCID}`;
+        const imageURR = `https://coral-magic-mackerel-539.mypinata.cloud/ipfs/QmR4AzXbj7myPBCqZpdMnKVNS1esVqGH6GKKP8sdVkBEWL`;
         req.metadata = metaUri;
         req.ipfsImage = imageURR;
         next()
